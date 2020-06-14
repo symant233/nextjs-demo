@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/link";
 
 const Home = () => (
   <div className="container">
@@ -17,33 +18,19 @@ const Home = () => (
       </p>
 
       <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <Link href="/posts/first-post">
+          <div className="card">
+            <h3>Posts &rarr;</h3>
+            <p>This is a test first post page. Learn more about Next.js!</p>
+          </div>
+        </Link>
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
+        <Link href="/profile">
+          <div className="card">
+            <h3>Profile &rarr;</h3>
+            <p>A demo profile page. Learn Next.js css module.</p>
+          </div>
+        </Link>
       </div>
     </main>
 
@@ -53,7 +40,7 @@ const Home = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <img src="/vercel.svg" alt="Vercel Logo" />
+        Powered by <img src="/images/vercel.svg" alt="Vercel Logo" />
       </a>
     </footer>
 
@@ -192,12 +179,11 @@ const Home = () => (
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
-
       * {
         box-sizing: border-box;
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
